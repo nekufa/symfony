@@ -85,10 +85,7 @@ class ApcuAdapter extends AbstractAdapter
 
     protected function doDelete(array $ids): bool
     {
-        foreach ($ids as $id) {
-            apcu_delete($id);
-        }
-
+        apcu_delete($ids);
         return true;
     }
 
